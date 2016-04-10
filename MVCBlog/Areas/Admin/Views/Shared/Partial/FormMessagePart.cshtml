@@ -1,0 +1,18 @@
+﻿@using MVCBlog.Areas.Admin.Models.Types
+
+@if (ViewBag.IslemDurum == 1)
+{
+    <div class="alert alert-success alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h4>	<i class="icon fa fa-check"></i>İşlem başarılı</h4>
+        @FormMessages.addsuccess
+    </div>
+}
+else if (ViewBag.IslemDurum == 2)
+{
+    <div class="alert alert-danger alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h4><i class="icon fa fa-ban"></i>İşlem başarısız!</h4>
+        @FormMessages.required
+    </div>
+}
