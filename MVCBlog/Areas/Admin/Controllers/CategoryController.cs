@@ -41,7 +41,7 @@ namespace MVCBlog.Areas.Admin.Controllers
                 db.Categorys.Add(category);
                 db.SaveChanges();
                 ViewBag.IslemDurum = 1;
-                return View();
+                return RedirectToAction("Index");
             }
             else
             {
@@ -85,16 +85,26 @@ namespace MVCBlog.Areas.Admin.Controllers
 
         //UpdateCategory/id
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult UpdateCategory(CategoryVM model)
         {
-            Category category = db.Categorys.FirstOrDefault(m => m.ID == model.ID);
 
-             category.Name = model.Name;
-             category.Description = model.Description;
+           if(ModelState.IsValid)
+            {
+                Category category = db.Categorys.FirstOrDefault(m => m.ID == model.ID);
 
-            db.SaveChanges();
+                category.Name = model.Name;
+                category.Description = model.Description;
 
-            return View();
+                db.SaveChanges();
+                ViewBag.IslemDurum = 1;
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewBag.IslemDurum = 2;
+                return View();
+            }
 
         }
 
