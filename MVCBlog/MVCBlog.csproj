@@ -123,6 +123,7 @@
     <Compile Include="Areas\Admin\Models\DTO\BaseVM.cs" />
     <Compile Include="Areas\Admin\Models\DTO\CategoryVM.cs" />
     <Compile Include="Areas\Admin\Models\DTO\LoginModel.cs" />
+    <Compile Include="Areas\Admin\Models\Types\FormMessages.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

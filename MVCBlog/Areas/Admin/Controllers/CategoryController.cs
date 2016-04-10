@@ -24,6 +24,7 @@ namespace MVCBlog.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult AddCategory(CategoryVM model)
         {
+
             if (ModelState.IsValid)
             {
                 Category category = new Category();
@@ -31,13 +32,15 @@ namespace MVCBlog.Areas.Admin.Controllers
                 category.Description = model.Description;
                 db.Categorys.Add(category);
                 db.SaveChanges();
+                ViewBag.IslemDurum = 1;
                 return View();
             }
             else
             {
+                ViewBag.IslemDurum = 2;
                 return View();
             }
-          
+
         }
     }
 }

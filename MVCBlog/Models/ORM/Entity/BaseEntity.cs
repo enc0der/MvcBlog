@@ -25,6 +25,6 @@ namespace MVCBlog.Models.ORM.Entity
             set { _isDeleted = value; }
         }
 
-        public DateTime DeleteDate { get; set; }
+        public DateTime? DeleteDate { get; set; }
     }
 }
