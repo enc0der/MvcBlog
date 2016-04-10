@@ -1,4 +1,5 @@
-﻿using MVCBlog.Models.ORM.Context;
+﻿using MVCBlog.Areas.Admin.Models.Attributes;
+using MVCBlog.Models.ORM.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Web.Mvc;
 
 namespace MVCBlog.Areas.Admin.Controllers
 {
+    [LoginControl]
     public class BaseController : Controller
     {
         public BlogContext db;

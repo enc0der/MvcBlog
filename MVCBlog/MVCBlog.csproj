@@ -100,15 +100,19 @@
     <Content Include="Areas\Admin\Content\css\AdminLTE.min.css" />
     <Content Include="Areas\Admin\Content\css\blue.css" />
     <Content Include="Areas\Admin\Content\css\bootstrap.min.css" />
+    <Content Include="Areas\Admin\Content\css\dataTables.bootstrap.css" />
     <Content Include="Areas\Admin\Content\css\_all-skins.min.css" />
+    <Content Include="Areas\Admin\Content\img\delete.png" />
     <Content Include="Areas\Admin\Content\img\user2-160x160.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\app.min.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\dataTables.bootstrap.min.js" />
     <Content Include="Scripts\demo.js" />
     <Content Include="Scripts\fastclick.min.js" />
     <Content Include="Scripts\icheck.min.js" />
     <Content Include="Scripts\jQuery-2.1.4.min.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
     <Content Include="Scripts\jquery.slimscroll.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -145,6 +149,9 @@
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Category\AddCategory.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\Partial\FormMessagePart.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Partial\CategoryForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -8,12 +8,20 @@ using System.Web.Mvc;
 
 namespace MVCBlog.Areas.Admin.Controllers
 {
+
     public class CategoryController : BaseController
     {
         // GET: Admin/Category
         public ActionResult Index()
         {
-            return View();
+            List<CategoryVM> model = db.Categorys.Where(m => m.IsDeleted == false).OrderBy(m => m.AddDate).Select(m => new CategoryVM()
+            {
+                Name = m.Name,
+                Description = m.Description,
+                ID = m.ID
+            }).ToList();
+
+            return View(model);
         }
 
         public ActionResult AddCategory()
@@ -42,5 +50,53 @@ namespace MVCBlog.Areas.Admin.Controllers
             }
 
         }
+
+        /// <summary>
+        /// kategori silme
+        /// </summary>
+        /// <param name="id">int değer alır kategori ID</param>
+        /// <returns></returns>
+        public JsonResult DeleteCategory(int id)
+        {
+
+            Category category = db.Categorys.FirstOrDefault(m => m.ID == id);
+            category.IsDeleted = true;
+            category.DeleteDate = DateTime.Now;
+            db.SaveChanges();
+
+            return Json("");
+
+        }
+
+
+        //UpdateCategory/id
+        public ActionResult UpdateCategory(int id)
+        {
+            Category category = db.Categorys.FirstOrDefault(m => m.ID == id);
+            CategoryVM model = new CategoryVM();
+
+            model.Name = category.Name;
+            model.Description = category.Description;
+
+            return View(model);
+
+        }
+
+
+        //UpdateCategory/id
+        [HttpPost]
+        public ActionResult UpdateCategory(CategoryVM model)
+        {
+            Category category = db.Categorys.FirstOrDefault(m => m.ID == model.ID);
+
+             category.Name = model.Name;
+             category.Description = model.Description;
+
+            db.SaveChanges();
+
+            return View();
+
+        }
+
     }
 }
