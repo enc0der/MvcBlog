@@ -510,6 +510,7 @@
     <Compile Include="Areas\Admin\Models\DTO\CategoryVM.cs" />
     <Compile Include="Areas\Admin\Models\DTO\LoginModel.cs" />
     <Compile Include="Areas\Admin\Models\DTO\SiteMenuVM.cs" />
+    <Compile Include="Areas\Admin\Models\Services\HTMLDataSourceService\DrpServices.cs" />
     <Compile Include="Areas\Admin\Models\Types\FormMessages.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -540,6 +541,8 @@
     <Content Include="Areas\Admin\Views\BlogPost\AddBlogPost.cshtml" />
     <Content Include="Areas\Admin\Views\BlogPost\Partial\BlogPostForm.cshtml" />
     <Content Include="Scripts\ckeditor\.htaccess" />
+    <Content Include="Areas\Admin\Views\BlogPost\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\BlogPost\UpdateBlogPost.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -13,6 +13,8 @@ namespace MVCBlog.Areas.Admin.Models.DTO
 
         public string Content { get; set; }
 
+        public string CategoryName { get; set; }
+
         [Required]
         public int CategoryID { get; set; }
 
