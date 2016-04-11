@@ -13,7 +13,6 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-
     <link href="~/Areas/Admin/Content/css/AdminLTE.min.css" rel="stylesheet" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
@@ -27,6 +26,9 @@
     <!-- jQuery 2.1.4 -->
     <script src="~/Scripts/jQuery-2.1.4.min.js"></script>
     <!-- Bootstrap 3.3.5 -->
+    @*@using System.Web.Optimization
+    @Scripts.Render("~/bundles/admin/layout")*@
+
     <script src="~/Scripts/bootstrap.min.js"></script>
     <!-- SlimScroll -->
     <script src="~/Scripts/jquery.slimscroll.min.js"></script>
@@ -41,7 +43,7 @@
 <!-- the fixed layout is not compatible with sidebar-mini -->
 
 <style>
-    .field-validation-error
+    .field-validation-error,.error
     {
         color:red;
     }
