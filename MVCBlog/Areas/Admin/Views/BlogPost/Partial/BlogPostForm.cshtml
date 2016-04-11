@@ -1,0 +1,31 @@
+﻿@model MVCBlog.Areas.Admin.Models.DTO.BlogPostVM
+<script src="~/Scripts/ckeditor/ckeditor.js"></script>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(m=>m.ID)
+    <div class="box-body">
+        <div class="form-group">
+            @Html.LabelFor(m => m.Title)
+            @Html.TextBoxFor(m => m.Title, new { @class = "form-control", @placeholder = "Post başlıl" })
+            @Html.ValidationMessageFor(m => m.Title)
+        </div>
+
+        <div class="from-group">
+            <label>Kategori</label>
+            @Html.DropDownList("CategoryID",Model.drpCategories,"Seçiniz",new { @class="form-control"})
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Content)
+       
+            @Html.TextAreaFor(m=>m.Content,new { @class= "ckeditor",@id= "ckeditor" })
+            @Html.ValidationMessageFor(m => m.Content)
+
+        </div>
+
+
+    </div><!-- /.box-body -->
+    <div class="box-footer">
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </div>
+}

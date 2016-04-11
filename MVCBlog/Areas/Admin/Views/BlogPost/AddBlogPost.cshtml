@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "AddBlogPost";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Post gönderme işlemi
+    </h1>
+
+</section>
+<!-- Main content -->
+<section class="content">
+
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-9">
+
+            @Html.Partial("/Areas/Admin/Views/Shared/Partial/FormMessagePart.cshtml")
+
+            <!-- general form elements -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Post bilgileri</h3>
+                </div><!-- /.box-header -->
+                <!-- form start -->
+
+                @Html.Partial("Partial/BlogPostForm")
+
+            </div><!-- /.box -->
+            <!-- Form Element sizes -->
+
+        </div><!--/.col (left) -->
+        <!-- right column -->
+
+    </div>   <!-- /.row -->
+</section><!-- /.content -->
