@@ -10,7 +10,7 @@
 <link href="~/Areas/Admin/Content/css/dataTables.bootstrap.css" rel="stylesheet" />
 <script src="~/Scripts/jquery.dataTables.min.js"></script>
 <script src="~/Scripts/dataTables.bootstrap.min.js"></script>
-
+<script src="~/Scripts/custom/deleteRecord.js"></script>
 
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -45,7 +45,7 @@
                                     <td>@item.CategoryName</td>
                                     <td>@item.Title</td>
                                     <th><a href="/Admin/BlogPost/UpdateBlogPost/@item.ID">Güncelle</a></th>
-                                    <td><img src="~/Areas/Admin/Content/img/delete.png" title="Sil" alt="kategori sil" style="cursor:pointer;" onclick="Delete(@item.ID)" /></td>
+                                    <td><img src="~/Areas/Admin/Content/img/delete.png" title="Sil" alt="kategori sil" style="cursor:pointer;" onclick="Delete('/Admin/BlogPost/DeleteBlogPost/',@item.ID)" /></td>
                                 </tr>
                             }
 
@@ -67,23 +67,6 @@
         </div><!-- /.col -->
     </div><!-- /.row -->
 </section><!-- /.content -->
-
-<script>
-
-    function Delete(id)
-    {
-        $.ajax({
-            url: "/Admin/BlogPost/DeleteBlogPost/" + id,
-            //data:id,
-            type: "POST",
-            success: function (data) {
-                $("#a_" + id).fadeOut();
-            }
-        });
-    }
-
-</script>
-
 
 <script>
     $(function () {

@@ -15,6 +15,7 @@ namespace MVCBlog.Areas.Admin.Controllers
 
         public BaseController()
         {
+            //ViewBag.User = HttpContext.User.Identity.Name;
             db = new BlogContext();
         }
 

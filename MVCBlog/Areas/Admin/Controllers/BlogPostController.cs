@@ -86,5 +86,31 @@ namespace MVCBlog.Areas.Admin.Controllers
             return View(model);
         }
 
+        [ValidateInput(false)]
+        [HttpPost]
+        public ActionResult UpdateBlogPost(BlogPostVM model)
+        {
+            model.drpCategories = DrpServices.getDrpCategories();
+
+            if (ModelState.IsValid)
+            {
+
+            BlogPost blogpost = db.BlogPost.FirstOrDefault(m => m.ID == model.ID);
+            blogpost.CategoryID = model.CategoryID;
+            blogpost.Title = model.Title;
+            blogpost.Content = model.Content;
+            
+            db.SaveChanges();
+                ViewBag.IslemDurum = 1;
+                return View(model);
+            }
+            else
+            {
+                ViewBag.IslemDurum = 2;
+                return View(model);
+            }
+           
+        }
+
     }
 }
