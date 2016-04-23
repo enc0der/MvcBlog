@@ -11,7 +11,7 @@ namespace MVCBlog.Areas.Admin.Controllers
 {
     public class HizmetController : BaseController
     {
-      
+        // github dan düzenlendi bu 
         // hizmet listesi anasayfa
         public ActionResult Index()
         {
