@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "UpdateHizmet";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+       Hizmet Düzenleme Formu
+    </h1>
+    @Html.ActionLink("Hizmet Listesi", "index", null, new { @class = "btn btn-success" })
+</section>
+<!-- Main content -->
+<section class="content">
+
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-9">
+
+            @Html.Partial("/Areas/Admin/Views/Shared/Partial/FormMessagePart.cshtml")
+
+            <!-- general form elements -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Hizmet bilgileri</h3>
+                </div><!-- /.box-header -->
+                <!-- form start -->
+
+                @Html.Partial("Partial/HizmetForm")
+
+            </div><!-- /.box -->
+            <!-- Form Element sizes -->
+
+        </div><!--/.col (left) -->
+        <!-- right column -->
+
+    </div>   <!-- /.row -->
+</section><!-- /.content -->
+
+

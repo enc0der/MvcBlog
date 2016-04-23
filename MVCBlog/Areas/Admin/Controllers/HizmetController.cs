@@ -89,7 +89,58 @@ namespace MVCBlog.Areas.Admin.Controllers
             return Json("");
         }
 
+        public ActionResult UpdateHizmet(int id)
+        {
 
+            Hizmet hizmet = db.Hizmets.FirstOrDefault(m=>m.ID==id);
+
+            HizmetVM model = new HizmetVM();
+
+            model.HizmetAdi = hizmet.HizmetAdi;
+            model.HizmetIcerik = hizmet.HizmetIcerik;
+            model.HizmetSirasi = hizmet.HizmetSirasi;
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult UpdateHizmet(HizmetVM model, HttpPostedFileBase HizmetResim)
+        {
+
+            if(ModelState.IsValid)
+            {
+                Hizmet hizmet = db.Hizmets.FirstOrDefault(m => m.ID == model.ID);
+                hizmet.HizmetAdi = model.HizmetAdi;
+                hizmet.HizmetIcerik = model.HizmetIcerik;
+                hizmet.HizmetSirasi = model.HizmetSirasi;
+                hizmet.HizmetResim = null;
+
+                if (HizmetResim != null && HizmetResim.ContentLength > 0)
+                {
+                    string ResimAdi = Guid.NewGuid().ToString().Replace("-", "");
+                    string uzanti = System.IO.Path.GetExtension(Path.GetFileName(HizmetResim.FileName));
+                    string TamYol = Path.Combine(Server.MapPath("~/Content/Img/HizmetResim/" + ResimAdi + uzanti));
+
+                    hizmet.HizmetResim = "~/Content/Img/HizmetResim/" + ResimAdi + uzanti;
+
+
+                    HizmetResim.SaveAs(TamYol);
+                }
+
+
+
+                db.SaveChanges();
+                ViewBag.IslemDurum = 1;
+                return RedirectToAction("index");
+            }
+            else
+            {
+                ViewBag.IslemDurum = 2;
+                return View(model);
+            }
+
+        }
 
 
     }
