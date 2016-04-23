@@ -12,7 +12,7 @@ namespace MVCBlog.Areas.Admin.Controllers
     public class HizmetController : BaseController
     {
         
-
+        // githup dan düzenlendi.
         // hizmet listesi anasayfa
         public ActionResult Index()
         {
