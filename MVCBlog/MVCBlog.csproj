@@ -510,6 +510,7 @@
     <Compile Include="Areas\Admin\Models\DTO\BaseVM.cs" />
     <Compile Include="Areas\Admin\Models\DTO\BlogPostVM.cs" />
     <Compile Include="Areas\Admin\Models\DTO\CategoryVM.cs" />
+    <Compile Include="Areas\Admin\Models\DTO\HizmetVM.cs" />
     <Compile Include="Areas\Admin\Models\DTO\LoginModel.cs" />
     <Compile Include="Areas\Admin\Models\DTO\SiteMenuVM.cs" />
     <Compile Include="Areas\Admin\Models\Services\HTMLDataSourceService\DrpServices.cs" />
@@ -546,6 +547,7 @@
     <Content Include="Scripts\ckeditor\.htaccess" />
     <Content Include="Areas\Admin\Views\BlogPost\Index.cshtml" />
     <Content Include="Areas\Admin\Views\BlogPost\UpdateBlogPost.cshtml" />
+    <Content Include="Areas\Admin\Views\Hizmet\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -557,7 +559,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Content\fonts\" />
     <Folder Include="Areas\Admin\Views\Base\" />
-    <Folder Include="Areas\Admin\Views\Hizmet\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>
