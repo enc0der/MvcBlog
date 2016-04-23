@@ -1,0 +1,39 @@
+﻿
+@model MVCBlog.Areas.Admin.Models.DTO.HizmetVM
+<script src="~/Scripts/ckeditor/ckeditor.js"></script>
+@using (Html.BeginForm("AddHizmet", "Hizmet",FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    <div class="box-body">
+        <div class="form-group">
+            @Html.LabelFor(m => m.HizmetAdi)
+            @Html.TextBoxFor(m => m.HizmetAdi, new { @class = "form-control", @placeholder = "Hizmet Adı" })
+            @Html.ValidationMessageFor(m => m.HizmetAdi)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.HizmetIcerik)
+
+            @Html.TextAreaFor(m => m.HizmetIcerik, new { @class = "ckeditor", @id = "ckeditor" })
+            @Html.ValidationMessageFor(m => m.HizmetIcerik)
+
+        </div>
+
+       <div class="form-group">
+           @Html.LabelFor(m=>m.HizmetResim)
+          <input type="file" name="HizmetResim" />
+           @Html.ValidationMessageFor(m=>m.HizmetResim)
+
+       </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m=>m.HizmetSirasi)
+        @Html.TextBoxFor(m=>m.HizmetSirasi, new { @type="number" ,@class ="form-control",@placeholder="Hizmet sıra no (sadece rakam)"})
+    </div>
+
+
+    </div><!-- /.box-body -->
+    <div class="box-footer">
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </div>
+}
