@@ -502,6 +502,7 @@
     <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
     <Compile Include="Areas\Admin\Controllers\BlogPostController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HizmetController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\SiteMenuController.cs" />
@@ -522,6 +523,7 @@
     <Compile Include="Models\ORM\Entity\BaseEntity.cs" />
     <Compile Include="Models\ORM\Entity\BlogPost.cs" />
     <Compile Include="Models\ORM\Entity\Category.cs" />
+    <Compile Include="Models\ORM\Entity\Hizmet.cs" />
     <Compile Include="Models\ORM\Entity\SiteMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -555,6 +557,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Content\fonts\" />
     <Folder Include="Areas\Admin\Views\Base\" />
+    <Folder Include="Areas\Admin\Views\Hizmet\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>
