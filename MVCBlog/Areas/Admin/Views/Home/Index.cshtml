@@ -7,12 +7,13 @@
 @{ 
     Dashboard ds = new Dashboard();
     int ToplamHaberSayisi = ds.GetToplamHaberSayisi();
+    int ToplamHizmetSayisi = ds.GetToplamHizmetSayisi();
 }
 
  <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-      <i class="fa fa-home"></i>  Admin Paneli
+      <i class="fa fa-home"></i>Admin Paneli
     </h1>
    
 </section>
@@ -33,7 +34,7 @@
                 <div class="info-box">
                     <span class="info-box-icon bg-aqua"><i class="fa fa-pencil"></i></span>
                     <div class="info-box-content">
-                        <span class="info-box-text">TOPLAM MAKALE</span>
+                        <span class="info-box-text">Toplam Makale</span>
                         <span class="info-box-number">1,410</span>
                     </div><!-- /.info-box-content -->
                 </div><!-- /.info-box -->
@@ -42,17 +43,17 @@
                 <div class="info-box">
                     <span class="info-box-icon bg-aqua"><i class="fa fa-file-text"></i></span>
                     <div class="info-box-content">
-                        <span class="info-box-text">Toplam haber</span>
+                        <span class="info-box-text">Toplam Haber</span>
                         <span class="info-box-number">@ToplamHaberSayisi</span>
                     </div><!-- /.info-box-content -->
                 </div><!-- /.info-box -->
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="info-box">
-                    <span class="info-box-icon bg-aqua"><i class="fa fa-file"></i></span>
+                    <span class="info-box-icon bg-aqua"><i class="fa fa-magnet"></i></span>
                     <div class="info-box-content">
-                        <span class="info-box-text">Messages</span>
-                        <span class="info-box-number">1,410</span>
+                        <span class="info-box-text">Toplam Hizmet</span>
+                        <span class="info-box-number">@ToplamHizmetSayisi</span>
                     </div><!-- /.info-box-content -->
                 </div>
             </div><!-- /.info-box -->

@@ -8,13 +8,19 @@ namespace MVCBlog.Areas.Admin.Models.Services
 {
     public class Dashboard
     {
-        private int ToplamHaberSayisi { get; set ; }
+        BlogContext db = new BlogContext();
+
+
 
         public int GetToplamHaberSayisi()
         {
-            BlogContext db = new BlogContext();
-            ToplamHaberSayisi = db.Habers.Count();
-            return ToplamHaberSayisi;
+
+          return  db.Habers.Where(m=>m.IsDeleted==false).Count();  
+        }
+
+        public int GetToplamHizmetSayisi()
+        {
+            return db.Hizmets.Where(m => m.IsDeleted == false).Count();
         }
     }
 }
