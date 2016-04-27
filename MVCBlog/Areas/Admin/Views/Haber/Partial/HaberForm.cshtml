@@ -22,14 +22,14 @@
             @Html.LabelFor(m => m.Resim)
             <input type="file" name="HaberResim" />
             @Html.ValidationMessageFor(m => m.Resim)
+            @Html.HiddenFor(m=>m.Resim)
 
         </div>
      
-        @if (string.IsNullOrEmpty(Model.Resim))
-        {
-            <img src="@Model.Resim" alt="" width="250" height="300" />
-        }
-
+     
+        <img src="@Model.Resim" alt="haber resim" title="haber resim"  width="250" height="300" />
+   
+     
     </div><!-- /.box-body -->
     <div class="box-footer">
         <button type="submit" class="btn btn-primary">Kaydet</button>
