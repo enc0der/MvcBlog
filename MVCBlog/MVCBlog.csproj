@@ -515,6 +515,7 @@
     <Compile Include="Areas\Admin\Models\DTO\HizmetVM.cs" />
     <Compile Include="Areas\Admin\Models\DTO\LoginModel.cs" />
     <Compile Include="Areas\Admin\Models\DTO\SiteMenuVM.cs" />
+    <Compile Include="Areas\Admin\Models\Services\Dashboard.cs" />
     <Compile Include="Areas\Admin\Models\Services\HTMLDataSourceService\DrpServices.cs" />
     <Compile Include="Areas\Admin\Models\Types\FormMessages.cs" />
     <Compile Include="Global.asax.cs">

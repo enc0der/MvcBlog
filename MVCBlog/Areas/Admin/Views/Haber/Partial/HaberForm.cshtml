@@ -2,8 +2,8 @@
 <script src="~/Scripts/ckeditor/ckeditor.js"></script>
 @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-                
-                <div class="box-body">
+          @Html.AntiForgeryToken()      
+         <div class="box-body">
         <div class="form-group">
             @Html.LabelFor(m => m.HaberBaslik)
             @Html.TextBoxFor(m => m.HaberBaslik, new { @class = "form-control", @placeholder = "Haber başlık" })

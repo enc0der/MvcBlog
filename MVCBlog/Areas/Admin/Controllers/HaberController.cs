@@ -35,6 +35,7 @@ namespace MVCBlog.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateInput(false)]
+        [ValidateAntiForgeryToken]
         public ActionResult AddHaber(HaberVM model, HttpPostedFileBase HaberResim)
         {
 

@@ -11,7 +11,7 @@ using System.Web.Mvc;
 /// <summary>
 /// Nuh ÇOLAKKADIOĞLU
 /// hex-tr@hotmail.com
-/// 0541 501 34 37
+/// 
 /// </summary>
 /// 
 
