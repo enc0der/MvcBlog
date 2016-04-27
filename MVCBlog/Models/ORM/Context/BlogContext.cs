@@ -26,7 +26,7 @@ namespace MVCBlog.Models.ORM.Context
         public DbSet<SiteMenu> SiteMenus { get; set; }
         public DbSet<Hizmet> Hizmets { get; set; }
         public DbSet<Haber> Habers { get; set; }
-
+        public DbSet<Refaranslar> Refarans { get; set; }
 
     }
 }

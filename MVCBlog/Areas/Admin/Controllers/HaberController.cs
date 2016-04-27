@@ -38,7 +38,7 @@ namespace MVCBlog.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult AddHaber(HaberVM model, HttpPostedFileBase HaberResim)
         {
-
+            //kendime not resimlerin uzantılarını kontorl et ve boyutlandırma yap gabala yazma :)
             if (ModelState.IsValid)
             {
                 Haber haber = new Haber();

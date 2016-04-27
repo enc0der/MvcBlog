@@ -1,0 +1,37 @@
+﻿@model MVCBlog.Areas.Admin.Models.DTO.RefaransVM
+
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+          @Html.AntiForgeryToken()      
+         <div class="box-body">
+        <div class="form-group">
+            @Html.LabelFor(m => m.RefaransAdi)
+            @Html.TextBoxFor(m => m.RefaransAdi, new { @class = "form-control", @placeholder = "Refarans adı" })
+            @Html.ValidationMessageFor(m => m.RefaransAdi)
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.RefaransResim)
+            <input type="file" name="RefaransResim" />
+            @Html.ValidationMessageFor(m => m.RefaransResim)
+            @Html.HiddenFor(m=>m.RefaransResim)
+
+        </div>
+     
+             <div class="form-group">
+                 @Html.Label("Aktif")
+                 @Html.RadioButton("isActive",true,true)
+                 @Html.Label("Pasif")
+                 @Html.RadioButton("isActive", false, false)
+
+             </div>
+        @*<img src="@Model.RefaransResim" alt="haber resim" title="haber resim"  width="250" height="300" />*@
+   
+     
+    </div><!-- /.box-body -->
+    <div class="box-footer">
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </div>
+}
