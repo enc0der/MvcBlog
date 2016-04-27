@@ -24,7 +24,11 @@
             @Html.ValidationMessageFor(m => m.Resim)
 
         </div>
-
+     
+        @if (string.IsNullOrEmpty(Model.Resim))
+        {
+            <img src="@Model.Resim" alt="" width="250" height="300" />
+        }
 
     </div><!-- /.box-body -->
     <div class="box-footer">

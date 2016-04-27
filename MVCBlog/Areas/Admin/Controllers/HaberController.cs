@@ -48,9 +48,9 @@ namespace MVCBlog.Areas.Admin.Controllers
                 {
                     string ResimAdi = Guid.NewGuid().ToString().Replace("-", "");
                     string uzanti = System.IO.Path.GetExtension(Path.GetFileName(HaberResim.FileName));
-                    string TamYol = Path.Combine(Server.MapPath("~/Content/Img/HaberResim/" + ResimAdi + uzanti));
+                    string TamYol = Path.Combine(Server.MapPath("/Content/Img/HaberResim/" + ResimAdi + uzanti));
 
-                    haber.Resim = "~/Content/Img/HaberResim/" + ResimAdi + uzanti;
+                    haber.Resim = "/Content/Img/HaberResim/" + ResimAdi + uzanti;
 
 
                     HaberResim.SaveAs(TamYol);
