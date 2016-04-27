@@ -502,6 +502,7 @@
     <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
     <Compile Include="Areas\Admin\Controllers\BlogPostController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HaberController.cs" />
     <Compile Include="Areas\Admin\Controllers\HizmetController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
@@ -510,6 +511,7 @@
     <Compile Include="Areas\Admin\Models\DTO\BaseVM.cs" />
     <Compile Include="Areas\Admin\Models\DTO\BlogPostVM.cs" />
     <Compile Include="Areas\Admin\Models\DTO\CategoryVM.cs" />
+    <Compile Include="Areas\Admin\Models\DTO\HaberVM.cs" />
     <Compile Include="Areas\Admin\Models\DTO\HizmetVM.cs" />
     <Compile Include="Areas\Admin\Models\DTO\LoginModel.cs" />
     <Compile Include="Areas\Admin\Models\DTO\SiteMenuVM.cs" />
@@ -552,6 +554,10 @@
     <Content Include="Areas\Admin\Views\Hizmet\AddHizmet.cshtml" />
     <Content Include="Areas\Admin\Views\Hizmet\Partial\HizmetForm.cshtml" />
     <Content Include="Areas\Admin\Views\Hizmet\UpdateHizmet.cshtml" />
+    <Content Include="Areas\Admin\Views\Haber\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Haber\AddHaber.cshtml" />
+    <Content Include="Areas\Admin\Views\Haber\Partial\HaberForm.cshtml" />
+    <Content Include="Areas\Admin\Views\Haber\UpdateHaber.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -563,6 +569,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Content\fonts\" />
     <Folder Include="Areas\Admin\Views\Base\" />
+    <Folder Include="Content\Img\HaberResim\" />
     <Folder Include="Content\Img\HizmetResim\" />
     <Folder Include="Controllers\" />
   </ItemGroup>

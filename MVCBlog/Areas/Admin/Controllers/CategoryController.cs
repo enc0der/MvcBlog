@@ -30,6 +30,7 @@ namespace MVCBlog.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult AddCategory(CategoryVM model)
         {
 
@@ -86,6 +87,7 @@ namespace MVCBlog.Areas.Admin.Controllers
         //UpdateCategory/id
         [HttpPost]
         [ValidateInput(false)]
+        [ValidateAntiForgeryToken]
         public ActionResult UpdateCategory(CategoryVM model)
         {
 

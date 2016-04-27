@@ -2,7 +2,7 @@
 
 @using (Html.BeginForm())
 {
-  
+  @Html.AntiForgeryToken();
     <div class="box-body">
         <div class="form-group">
             @Html.LabelFor(m => m.Name)
