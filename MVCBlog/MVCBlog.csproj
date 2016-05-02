@@ -591,6 +591,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Shared\Partial\FooterPartial.cshtml" />
     <Content Include="Views\Shared\Partial\HeaderPartial.cshtml" />
+    <Content Include="Views\SiteBlog\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -604,7 +605,6 @@
     <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Content\Img\HizmetResim\" />
     <Folder Include="Views\Base\" />
-    <Folder Include="Views\SiteBlog\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

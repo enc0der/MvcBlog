@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Site Blog Index";
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+@model MVCBlog.Models.ViewModel.BlogPostVM
+
+
+<h1>@Model.Title</h1>
+
+<p class="lead">
+    kategori <a href="#">@Model.Category</a>
+</p>
+<hr>
+
+<p><span class="glyphicon glyphicon-time">@Model.AddDate</span></p>
+<hr>
+
+<img class="img-responsive" src="~/Content/Img/BlogPostResim/@Model.PostImage" alt="">
+<hr>
+@Html.Raw(Model.Content)
+
+<div class="media">
+    <a class="pull-left" href="#">
+        <img class="media-object" src="http://placehold.it/64x64" alt="">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading">
+            Start Bootstrap
+            <small>August 25, 2014 at 9:30 PM</small>
+        </h4>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    </div>
+</div>
