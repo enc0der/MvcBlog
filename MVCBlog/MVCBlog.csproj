@@ -123,7 +123,6 @@
     <Content Include="Areas\Admin\Content\css\_all-skins.min.css" />
     <Content Include="Areas\Admin\Content\img\delete.png" />
     <Content Include="Areas\Admin\Content\img\user2-160x160.jpg" />
-    <Content Include="Content\css\blog-post.css" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
@@ -586,6 +585,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -598,7 +598,6 @@
     <Folder Include="Areas\Admin\Content\fonts\" />
     <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Content\Img\HizmetResim\" />
-    <Folder Include="Views\Home\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
