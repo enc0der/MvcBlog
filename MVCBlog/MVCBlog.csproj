@@ -123,6 +123,20 @@
     <Content Include="Areas\Admin\Content\css\_all-skins.min.css" />
     <Content Include="Areas\Admin\Content\img\delete.png" />
     <Content Include="Areas\Admin\Content\img\user2-160x160.jpg" />
+    <Content Include="Content\css\blog-post.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Img\BlogPostResim\1.PNG" />
+    <Content Include="Content\Img\BlogPostResim\4628fa9d-91ef-4679-be91-57b3dbf0e8c53.PNG" />
+    <Content Include="Content\Img\HaberResim\66d31c4225924eaabdf40c0249ce4638.png" />
+    <Content Include="Content\Img\HaberResim\bf85280f4594422dae1a7f97e292004a.jpg" />
+    <Content Include="Content\Img\HaberResim\BlogPostResim1.PNG" />
+    <Content Include="Content\Img\RefransResim\2850501145e642ed877328f51826db92.png" />
+    <Content Include="Content\Img\RefransResim\b3deb37fd9c0460bae35b34f893b201e.png" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\jquery.js" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\app.min.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -520,6 +534,7 @@
     <Compile Include="Areas\Admin\Models\Services\Dashboard.cs" />
     <Compile Include="Areas\Admin\Models\Services\HTMLDataSourceService\DrpServices.cs" />
     <Compile Include="Areas\Admin\Models\Types\FormMessages.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -566,6 +581,11 @@
     <Content Include="Areas\Admin\Views\Refarans\AddRefarans.cshtml" />
     <Content Include="Areas\Admin\Views\Refarans\Partial\RefaransForm.cshtml" />
     <Content Include="Areas\Admin\Views\Refarans\UpdateRefarans.cshtml" />
+    <Content Include="Views\Shared\SiteLayout.cshtml" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -577,11 +597,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Content\fonts\" />
     <Folder Include="Areas\Admin\Views\Base\" />
-    <Folder Include="Content\Img\BlogPostResim\" />
-    <Folder Include="Content\Img\HaberResim\" />
     <Folder Include="Content\Img\HizmetResim\" />
-    <Folder Include="Content\Img\RefransResim\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="Views\Home\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
