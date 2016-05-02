@@ -534,6 +534,7 @@
     <Compile Include="Areas\Admin\Models\Services\Dashboard.cs" />
     <Compile Include="Areas\Admin\Models\Services\HTMLDataSourceService\DrpServices.cs" />
     <Compile Include="Areas\Admin\Models\Types\FormMessages.cs" />
+    <Compile Include="Controllers\SiteBaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SiteBlogController.cs" />
     <Compile Include="Global.asax.cs">
@@ -549,6 +550,7 @@
     <Compile Include="Models\ORM\Entity\Hizmet.cs" />
     <Compile Include="Models\ORM\Entity\Refaranslar.cs" />
     <Compile Include="Models\ORM\Entity\SiteMenu.cs" />
+    <Compile Include="Models\ViewModel\BlogPostVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -601,6 +603,7 @@
     <Folder Include="Areas\Admin\Content\fonts\" />
     <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Content\Img\HizmetResim\" />
+    <Folder Include="Views\Base\" />
     <Folder Include="Views\SiteBlog\" />
   </ItemGroup>
   <PropertyGroup>

@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace MVCBlog.Controllers
 {
-    public class SiteBlogController : Controller
+    public class SiteBlogController : SiteBaseController
     {
         // GET: SiteBlog
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
             return View();
         }
