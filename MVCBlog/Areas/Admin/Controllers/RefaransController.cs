@@ -27,7 +27,8 @@ namespace MVCBlog.Areas.Admin.Controllers
 
         public ActionResult AddRefarans()
         {
-            return View();
+            RefaransVM model = new RefaransVM();
+            return View(model);
         }
 
         [HttpPost]
@@ -68,5 +69,21 @@ namespace MVCBlog.Areas.Admin.Controllers
 
             return View();
         }
+
+        public ActionResult UpdateRefarans(int id)
+        {
+            Refaranslar refarans = db.Refarans.FirstOrDefault(m=>m.ID==id);
+
+            RefaransVM model = new RefaransVM();
+
+            model.ID = refarans.ID;
+            model.isActive = refarans.isActive;
+            model.RefaransAdi = refarans.RefaransAdi;
+            model.RefaransResim = refarans.RefaransResim;
+            return View(model);
+        }
+
+
+
     }
 }

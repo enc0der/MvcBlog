@@ -1,8 +1,8 @@
 ﻿@model MVCBlog.Areas.Admin.Models.DTO.BlogPostVM
 <script src="~/Scripts/ckeditor/ckeditor.js"></script>
-@using (Html.BeginForm())
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-    @Html.HiddenFor(m=>m.ID)
+    @Html.HiddenFor(m => m.ID)
     <div class="box-body">
         <div class="form-group">
             @Html.LabelFor(m => m.Title)
@@ -10,15 +10,20 @@
             @Html.ValidationMessageFor(m => m.Title)
         </div>
 
+        <div class="form-group">
+            @Html.LabelFor(m => m.PostImage)
+            <input type="file" multiple name="PostImage" />
+        </div>
+
         <div class="from-group">
             <label>Kategori</label>
-            @Html.DropDownList("CategoryID",Model.drpCategories,"Seçiniz",new { @class="form-control"})
+            @Html.DropDownList("CategoryID", Model.drpCategories, "Seçiniz", new { @class = "form-control" })
         </div>
 
         <div class="form-group">
             @Html.LabelFor(m => m.Content)
-       
-            @Html.TextAreaFor(m=>m.Content,new { @class= "ckeditor",@id= "ckeditor" })
+
+            @Html.TextAreaFor(m => m.Content, new { @class = "ckeditor", @id = "ckeditor" })
             @Html.ValidationMessageFor(m => m.Content)
 
         </div>

@@ -15,6 +15,9 @@ namespace MVCBlog.Areas.Admin.Models.DTO
 
         public string CategoryName { get; set; }
 
+        [Display(Name ="Ana Resim")]
+        public HttpPostedFileBase PostImage { get; set; }
+
         [Required]
         public int CategoryID { get; set; }
 

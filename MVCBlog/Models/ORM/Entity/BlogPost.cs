@@ -14,6 +14,8 @@ namespace MVCBlog.Models.ORM.Entity
 
         public int CategoryID { get; set; }
 
+        public string ImagePath { get; set; }
+
         [ForeignKey("CategoryID")]
         public virtual Category Category { get; set; }
     }

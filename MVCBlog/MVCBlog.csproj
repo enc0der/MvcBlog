@@ -565,6 +565,7 @@
     <Content Include="Areas\Admin\Views\Refarans\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Refarans\AddRefarans.cshtml" />
     <Content Include="Areas\Admin\Views\Refarans\Partial\RefaransForm.cshtml" />
+    <Content Include="Areas\Admin\Views\Refarans\UpdateRefarans.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
