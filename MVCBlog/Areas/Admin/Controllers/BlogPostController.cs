@@ -3,6 +3,7 @@ using MVCBlog.Areas.Admin.Models.Services.HTMLDataSourceService;
 using MVCBlog.Models.ORM.Entity;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -42,10 +43,32 @@ namespace MVCBlog.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
+                string filename="";
+
+                foreach (string name in Request.Files)
+                {
+                    model.PostImage = Request.Files[name];
+                    string ext = Path.GetExtension(model.PostImage.FileName);
+
+                    if(ext==".jpg" || ext==".jpeg" || ext==".png")
+                    {
+
+                        string uniqnumber = Guid.NewGuid().ToString();
+                        filename = uniqnumber + model.PostImage.FileName;
+                        model.PostImage.SaveAs(Server.MapPath("~/Content/Img/BlogPostResim/" + filename));
+                    }
+                    else
+                    {
+                        ViewBag.hata = "resim formatı uygun degildir.";
+                    }
+                
+                }
+
                 BlogPost blogpost = new BlogPost();
                 blogpost.CategoryID = model.CategoryID;
                 blogpost.Title = model.Title;
                 blogpost.Content = model.Content;
+                blogpost.ImagePath = filename;
 
                 db.BlogPost.Add(blogpost);
                 db.SaveChanges();

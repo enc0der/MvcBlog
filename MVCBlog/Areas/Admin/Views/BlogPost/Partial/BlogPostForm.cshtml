@@ -1,5 +1,8 @@
 ﻿@model MVCBlog.Areas.Admin.Models.DTO.BlogPostVM
 <script src="~/Scripts/ckeditor/ckeditor.js"></script>
+
+<p class="alert alert-danger">@ViewBag.hata</p>
+
 @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.HiddenFor(m => m.ID)

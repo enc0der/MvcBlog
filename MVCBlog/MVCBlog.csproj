@@ -577,6 +577,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Content\fonts\" />
     <Folder Include="Areas\Admin\Views\Base\" />
+    <Folder Include="Content\Img\BlogPostResim\" />
     <Folder Include="Content\Img\HaberResim\" />
     <Folder Include="Content\Img\HizmetResim\" />
     <Folder Include="Content\Img\RefransResim\" />
