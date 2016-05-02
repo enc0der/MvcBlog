@@ -545,12 +545,14 @@
     <Compile Include="Models\ORM\Entity\AdminUser.cs" />
     <Compile Include="Models\ORM\Entity\BaseEntity.cs" />
     <Compile Include="Models\ORM\Entity\BlogPost.cs" />
+    <Compile Include="Models\ORM\Entity\BlogPostComment.cs" />
     <Compile Include="Models\ORM\Entity\Category.cs" />
     <Compile Include="Models\ORM\Entity\Haber.cs" />
     <Compile Include="Models\ORM\Entity\Hizmet.cs" />
     <Compile Include="Models\ORM\Entity\Refaranslar.cs" />
     <Compile Include="Models\ORM\Entity\SiteMenu.cs" />
     <Compile Include="Models\ViewModel\BlogPostVM.cs" />
+    <Compile Include="Models\ViewModel\CommentVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

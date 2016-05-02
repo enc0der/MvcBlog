@@ -1,23 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
 namespace MVCBlog.Models.ViewModel
 {
-    public class BlogPostVM
+    public class CommentVM
     {
-        public int Id { get; set; }
-
+        [Display(Name ="Başlık")]
         public string Title { get; set; }
 
-        public string PostImage { get; set; }
-
-        public string Category { get; set; }
-
-        public DateTime? AddDate { get; set; }
-
+        [Display(Name = "İçerik")]
         public string Content { get; set; }
 
+        public int BlogPostId { get; set; }
     }
 }

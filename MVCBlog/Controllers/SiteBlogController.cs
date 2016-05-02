@@ -22,7 +22,22 @@ namespace MVCBlog.Controllers
             model.Content = blogpost.Content;
             model.Category = blogpost.Category.Name;
             model.AddDate = blogpost.AddDate;
+            model.Id = blogpost.ID;
             return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult AddComment(CommentVM model)
+        {
+            BlogPostComment comment = new BlogPostComment();
+            comment.Title = model.Title;
+            comment.Content = model.Content;
+            comment.BlogPostID = model.BlogPostId;
+            db.BlogPostComments.Add(comment);
+            db.SaveChanges();
+
+            return RedirectToAction("Index","SiteBlog",new { id=model.BlogPostId});
+
         }
     }
 }

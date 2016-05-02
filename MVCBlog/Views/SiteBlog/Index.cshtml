@@ -19,7 +19,32 @@
 <img class="img-responsive" src="~/Content/Img/BlogPostResim/@Model.PostImage" alt="">
 <hr>
 @Html.Raw(Model.Content)
+<br />
+<br />
 
+<div class="well">
+    <h4>yorum ekle:</h4>
+
+    @using (Html.BeginForm("AddComment", "SiteBlog", FormMethod.Post))
+    {
+        <div class="form-group">
+            <input type="text" class="form-control" name="Title" />
+        </div>
+        <div class="form-group">
+            <textarea name="Content" class="form-control" rows="3"></textarea>
+        </div>
+        <input type="hidden" value="@Model.Id" name="BlogPostId" />
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    }
+
+ 
+     
+  
+</div>
+
+
+<br />
+<br />
 <div class="media">
     <a class="pull-left" href="#">
         <img class="media-object" src="http://placehold.it/64x64" alt="">
