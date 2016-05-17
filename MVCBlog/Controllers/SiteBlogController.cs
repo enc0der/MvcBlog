@@ -11,7 +11,7 @@ namespace MVCBlog.Controllers
     public class SiteBlogController : SiteBaseController
     {
         // GET: SiteBlog
-        public ActionResult Index(int id)
+        public ActionResult Index(string title, int id)
         {
             BlogPost blogpost = db.BlogPost.FirstOrDefault(m=>m.ID==id);
 
