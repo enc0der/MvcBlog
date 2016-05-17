@@ -14,9 +14,10 @@ namespace MVCBlog
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name:"SiteHome",
-                url:"/Anasayfa",
-                defaults:new { controller="SiteHome",action="Index" }
+                name:"Home",
+                url:"Anasayfa",
+                defaults:new { controller="Home",action="Index" },
+                 namespaces: new[] { "MVCBlog.Controllers" }
                 );
 
             routes.MapRoute(
