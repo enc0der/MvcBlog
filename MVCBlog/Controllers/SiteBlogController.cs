@@ -3,6 +3,7 @@ using MVCBlog.Models.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -11,9 +12,15 @@ namespace MVCBlog.Controllers
     public class SiteBlogController : SiteBaseController
     {
         // GET: SiteBlog
-        public ActionResult Index(string title, int id)
+        public ActionResult Index(string title, int? id)
         {
-            BlogPost blogpost = db.BlogPost.FirstOrDefault(m=>m.ID==id);
+            if (id == null)
+              return new  HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+            BlogPost blogpost = db.BlogPost.FirstOrDefault(m => m.ID == id);
+
+            if (blogpost == null)
+                return HttpNotFound();
 
             BlogPostVM model = new BlogPostVM();
 
