@@ -11,7 +11,7 @@ namespace MVCBlog.Controllers
 {
     public class SiteBlogController : SiteBaseController
     {
-        // GET: SiteBlog
+        
         public ActionResult Index(string title, int? id)
         {
             if (id == null)
