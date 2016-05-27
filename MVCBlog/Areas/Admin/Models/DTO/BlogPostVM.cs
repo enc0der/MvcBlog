@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+//
 namespace MVCBlog.Areas.Admin.Models.DTO
 {
     public class BlogPostVM:BaseVM
